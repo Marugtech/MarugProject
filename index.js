@@ -1,2 +1,2 @@
 
-console.log("hi im updated newly");
+console.log("hi im updated newly one");
