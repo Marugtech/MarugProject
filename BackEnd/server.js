@@ -1,11 +1,16 @@
 const express = require('express');
-
-
 const app = express();
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-app.get("/", (req,res)=>{
-    res.send("im working from Local")
+//DB Connection
+mongoose.connect(process.env.DB_URL)
+.then(()=>{
+    console.log("Databse Connected Successfully...!!!");
+}).catch((err)=>{
+    console.log("Db Connection Error");
 })
+
 
 
 app.listen(8000, ()=>{
