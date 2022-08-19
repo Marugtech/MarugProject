@@ -5,15 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavScrollExample from './Navbar';
-import Banner from './Banner';
-
+ import Banner from './Banner';
+// import Footer from './Footer';
+// import Example from './Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
     <NavScrollExample></NavScrollExample>
-    <Banner></Banner>
+     <Banner></Banner> 
     <App></App>
+    {/* <Footer></Footer> */}
+    {/* <Example></Example> */}
+    {/* <Login></Login> */}
     </React.StrictMode>
 );
 

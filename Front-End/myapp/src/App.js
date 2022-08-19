@@ -7,9 +7,32 @@ import foodimage2 from './assets/images/img2.jpeg'
 import foodimage3 from './assets/images/img3.jpeg'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
 function App() {
   return (
     <Container>
+      <br></br>
+      <Row>
+      <Col><h3>124 Restaurents</h3></Col>
+        <Col>
+          <div className='filters'><Form.Select style={{border:"none"}} aria-label="Default select example">
+      <option>Sort BY</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </Form.Select></div>
+        </Col>
+        <Col>
+          <div className='filters'><Form.Select style={{border:"none"}} aria-label="Default select example">
+      <option>Sort BY</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </Form.Select></div>
+    
+
+        </Col>
+      </Row>
        <Row>
         <Col className='pt-5' xs={12} md={4}>
         <div className='cards'>

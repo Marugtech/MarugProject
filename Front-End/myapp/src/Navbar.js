@@ -4,11 +4,16 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './style.css'
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BiMap,BiSearch,BiUserCircle,BiCartAlt,BiCaretDown } from "react-icons/bi";
-import companyLogo from './assets/logo/Logo1.jpeg'
+import companyLogo from './assets/logo/Logo1.jpeg';
+import React, { useState } from 'react';
 
+import Modal from 'react-bootstrap/Modal';
 function NavScrollExample() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <Navbar bg="" expand="lg">
       <Container>
@@ -41,11 +46,35 @@ function NavScrollExample() {
           </Nav>
           <Form className="d-flex">
           <Navbar.Brand href="#"><BiSearch size={18} color="#d10000"/>SEARCH</Navbar.Brand>
-          <Navbar.Brand href="#"><BiUserCircle size={18} color="#d10000"/>LOGIN</Navbar.Brand>
+          <Navbar.Brand href="#" onClick={handleShow}><BiUserCircle size={18} color="#d10000"/>LOGIN</Navbar.Brand>
           <Navbar.Brand href="#"><BiCartAlt size={18} color="#d10000"/>CART</Navbar.Brand>
           </Form>
         </Navbar.Collapse>
       </Container>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+        <div className='modal-text'><h2>Login</h2></div>
+        </Modal.Header>
+        
+        
+          <Form>
+          <div className="register">
+            <input className="inputbox" type="text" placeholder="Enter Name"  /><br></br>
+            <input className="inputbox" type="text" placeholder="Enter Email"  /><br></br>
+            <input className="inputbox" type="Password" placeholder="Enter Password" />
+            <button  className="appbutton" type="button">Sign Up</button>
+        </div>
+          </Form>
+        
+        {/* <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
     </Navbar>
   );
 }
