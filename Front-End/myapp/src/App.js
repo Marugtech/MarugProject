@@ -7,34 +7,36 @@ import foodimage2 from './assets/images/img2.jpeg'
 import foodimage3 from './assets/images/img3.jpeg'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { FaFilter } from "react-icons/fa";
 import Form from 'react-bootstrap/Form';
+import Popup from 'reactjs-popup';
+import popimg1 from './assets/images/popimg1.jpg'
+import popimg2 from './assets/images/popimg2.jpg'
+import popimg3 from './assets/images/popimg3.jpg'
+import popimg4 from './assets/images/popimg4.jpg'
+import popimg5 from './assets/images/popimg5.jpg'
+import popimg6 from './assets/images/popimg6.jpg'
 function App() {
   return (
     <Container>
       <br></br>
       <Row>
-      <Col><h3>124 Restaurents</h3></Col>
-        <Col>
-          <div className='filters'><Form.Select style={{border:"none"}} aria-label="Default select example">
-      <option>Sort BY</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </Form.Select></div>
-        </Col>
-        <Col>
-          <div className='filters'><Form.Select style={{border:"none"}} aria-label="Default select example">
-      <option>Sort BY</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </Form.Select></div>
-    
-
-        </Col>
+        <div className="d-flex">
+          <div className=" flex-grow-1"><h1>124 Restaurents</h1></div>
+          <div className=''><Form.Select>
+            <option >SortBy</option>
+            <option value="">Cost:High To Low</option>
+            <option value="">Cost:Low To High</option>
+            <option value="">Rating</option>
+            <option value="">Delivery Time</option>
+          </Form.Select></div>
+          <div className="p-2">Filter<FaFilter /></div>
+        </div>
       </Row>
+      <hr/>
        <Row>
-        <Col className='pt-5' xs={12} md={4}>
+       <h4>Products Arrounds You</h4>
+        <Col className='pt-3' xs={12} md={4}>
         <div className='cards'>
             <Card border="light">
               <Card.Img className='card-images' variant="top" src={foodimage1} alt="" />
@@ -55,10 +57,76 @@ function App() {
                   </Col>
                 </Row>
               </Card.Body>
+              <Popup trigger={<Button style={{background:"#ECECEC", color:"black", border:"white", fontFamily:"Figtree",fontSize:"23px", boxShadow:"none"}} className="quickview cards">QUICK VIEW</Button>}
+           position="center bottom" className='pop-position'>
+           <div className='quickview-popup'>
+           <div className='popup-card cards'>
+            <Card border="light">
+              {/* <Card.Img className='card-images' variant="top" src={foodimage3} alt="" /> */}
+              <Card.Body>
+                <Card.Title style={{textAlign:"center"}}>MENU</Card.Title>
+                <hr/>
+                <Row>
+        
+                <Col xs={4} md={4}>
+                  <h6><b>Hotel Buhari</b></h6>
+                  <p>Tambaram</p>
+                  <hr/>
+                  <p>Combos</p>
+                  <p>Veg Soups</p>
+                  <p>Non Veg Soups</p>
+                  <p>Mutton Biryani</p>
+                  <p>Chicken Biryani</p>
+                  <p>Bucket Biryani</p>
+                  </Col>
+                  <Col xs={8} md={8}>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg1} alt="" />
+                      <p className='pop-align'>Chicken Pepper</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg2} alt="" />
+                      <p className='pop-align'>Mutton Masala</p>
+                      </Col>
+                      
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg3} alt="" />
+                      <p className='pop-align'>Chicken Chukka</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg4} alt="" />
+                      <p className='pop-align'>Mutton Chukka</p>
+                      </Col>
+                     
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg5} alt="" />
+                      <p className='pop-align'>Kadai Chicken</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg6} alt="" />
+                      <p className='pop-align'>Butter Chicken Masala</p>
+                      </Col>
+                      
+                    </Row>
+                  
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </div>
+           </div>
+          </Popup>
             </Card>
           </div>
         </Col>
-        <Col className='pt-5' xs={12} md={4}>
+        <Col className='pt-3' xs={12} md={4}>
         <div className='cards'>
             <Card border="light">
               <Card.Img className='card-images' variant="top" src={foodimage2} alt="" />
@@ -79,10 +147,78 @@ function App() {
                   </Col>
                 </Row>
               </Card.Body>
+              <Popup trigger={<Button style={{background:"#ECECEC", color:"black", border:"white", fontFamily:"Figtree",fontSize:"23px", boxShadow:"none"}} className="quickview cards">QUICK VIEW</Button>}
+           position="center bottom" className='pop-position'>
+           <div className='quickview-popup'>
+           <div className='popup-card cards'>
+            <Card border="light">
+              {/* <Card.Img className='card-images' variant="top" src={foodimage3} alt="" /> */}
+              <Card.Body>
+                <Card.Title style={{textAlign:"center"}}>MENU</Card.Title>
+                <hr/>
+                <Row>
+        
+                <Col xs={4} md={4}>
+                  <h6><b>Hotel Buhari</b></h6>
+                  <p>Tambaram</p>
+                  <hr/>
+                  <p>Combos</p>
+                  <p>Veg Soups</p>
+                  <p>Non Veg Soups</p>
+                  <p>Mutton Biryani</p>
+                  <p>Chicken Biryani</p>
+                  <p>Bucket Biryani</p>
+                  </Col>
+                  <Col xs={8} md={8}>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg1} alt="" />
+                      <p className='pop-align'>Chicken Pepper</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg2} alt="" />
+                      <p className='pop-align'>Mutton Masala</p>
+                      </Col>
+                      
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg3} alt="" />
+                      <p className='pop-align'>Chicken Chukka</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg4} alt="" />
+                      <p className='pop-align'>Mutton Chukka</p>
+                      </Col>
+                     
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg5} alt="" />
+                      <p className='pop-align'>Kadai Chicken</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg6} alt="" />
+                      <p className='pop-align'>Butter Chicken Masala</p>
+                      </Col>
+                      
+                    </Row>
+                  
+                  </Col>
+                </Row>
+              </Card.Body>
             </Card>
           </div>
+           </div>
+          </Popup>
+            </Card>
+          </div>
+          
+          
         </Col>
-        <Col className='pt-5' xs={12} md={4}>
+        <Col className='pt-3' xs={12} md={4}>
         <div className='cards'>
             <Card border="light">
               <Card.Img className='card-images' variant="top" src={foodimage3} alt="" />
@@ -94,7 +230,7 @@ function App() {
                 <Row>
         
                 <Col xs={12} md={5}>
-                <Button className='orange'>Order Now</Button>
+                <Button style={{ background:"#d10000",border:"none"}}>Order Now</Button>
                   </Col>
                   <Col xs={12} md={4}>
                 <p className='arivaltime'>Arrival time 40min</p>
@@ -104,12 +240,78 @@ function App() {
                   </Col>
                 </Row>
               </Card.Body>
+              <Popup trigger={<Button style={{background:"#ECECEC", color:"black", border:"white", fontFamily:"Figtree",fontSize:"23px", boxShadow:"none"}} className="quickview cards">QUICK VIEW</Button>}
+           position="center bottom" className='pop-position'>
+           <div className='quickview-popup'>
+           <div className='popup-card cards'>
+            <Card border="light">
+              {/* <Card.Img className='card-images' variant="top" src={foodimage3} alt="" /> */}
+              <Card.Body>
+                <Card.Title style={{textAlign:"center"}}>MENU</Card.Title>
+                <hr/>
+                <Row>
+        
+                <Col xs={4} md={4}>
+                  <h6><b>Hotel Buhari</b></h6>
+                  <p>Tambaram</p>
+                  <hr/>
+                  <p>Combos</p>
+                  <p>Veg Soups</p>
+                  <p>Non Veg Soups</p>
+                  <p>Mutton Biryani</p>
+                  <p>Chicken Biryani</p>
+                  <p>Bucket Biryani</p>
+                  </Col>
+                  <Col xs={8} md={8}>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg1} alt="" />
+                      <p className='pop-align'>Chicken Pepper</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg2} alt="" />
+                      <p className='pop-align'>Mutton Masala</p>
+                      </Col>
+                      
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg3} alt="" />
+                      <p className='pop-align'>Chicken Chukka</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg4} alt="" />
+                      <p className='pop-align'>Mutton Chukka</p>
+                      </Col>
+                     
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg5} alt="" />
+                      <p className='pop-align'>Kadai Chicken</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg6} alt="" />
+                      <p className='pop-align'>Butter Chicken Masala</p>
+                      </Col>
+                      
+                    </Row>
+                  
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </div>
+           </div>
+          </Popup>
             </Card>
           </div>
         </Col>
       </Row>
       <Row>
-        <Col className='pt-5' xs={12} md={4}>
+        <Col className='pt-3' xs={12} md={4}>
         <div className='cards'>
             <Card border="light">
               <Card.Img className='card-images' variant="top" src={foodimage1} alt="" />
@@ -130,10 +332,76 @@ function App() {
                   </Col>
                 </Row>
               </Card.Body>
+              <Popup trigger={<Button style={{background:"#ECECEC", color:"black", border:"white", fontFamily:"Figtree",fontSize:"23px", boxShadow:"none"}} className="quickview cards">QUICK VIEW</Button>}
+           position="center bottom" className='pop-position'>
+           <div className='quickview-popup'>
+           <div className='popup-card cards'>
+            <Card border="light">
+              {/* <Card.Img className='card-images' variant="top" src={foodimage3} alt="" /> */}
+              <Card.Body>
+                <Card.Title style={{textAlign:"center"}}>MENU</Card.Title>
+                <hr/>
+                <Row>
+        
+                <Col xs={4} md={4}>
+                  <h6><b>Hotel Buhari</b></h6>
+                  <p>Tambaram</p>
+                  <hr/>
+                  <p>Combos</p>
+                  <p>Veg Soups</p>
+                  <p>Non Veg Soups</p>
+                  <p>Mutton Biryani</p>
+                  <p>Chicken Biryani</p>
+                  <p>Bucket Biryani</p>
+                  </Col>
+                  <Col xs={8} md={8}>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg1} alt="" />
+                      <p className='pop-align'>Chicken Pepper</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg2} alt="" />
+                      <p className='pop-align'>Mutton Masala</p>
+                      </Col>
+                      
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg3} alt="" />
+                      <p className='pop-align'>Chicken Chukka</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg4} alt="" />
+                      <p className='pop-align'>Mutton Chukka</p>
+                      </Col>
+                     
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg5} alt="" />
+                      <p className='pop-align'>Kadai Chicken</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg6} alt="" />
+                      <p className='pop-align'>Butter Chicken Masala</p>
+                      </Col>
+                      
+                    </Row>
+                  
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </div>
+           </div>
+          </Popup>
             </Card>
           </div>
         </Col>
-        <Col className='pt-5' xs={12} md={4}>
+        <Col className='pt-3' xs={12} md={4}>
         <div className='cards'>
             <Card border="light">
               <Card.Img className='card-images' variant="top" src={foodimage2} alt="" />
@@ -154,10 +422,76 @@ function App() {
                   </Col>
                 </Row>
               </Card.Body>
+              <Popup trigger={<Button style={{background:"#ECECEC", color:"black", border:"white", fontFamily:"Figtree",fontSize:"23px", boxShadow:"none"}} className="quickview cards">QUICK VIEW</Button>}
+           position="center bottom" className='pop-position'>
+           <div className='quickview-popup'>
+           <div className='popup-card cards'>
+            <Card border="light">
+              {/* <Card.Img className='card-images' variant="top" src={foodimage3} alt="" /> */}
+              <Card.Body>
+                <Card.Title style={{textAlign:"center"}}>MENU</Card.Title>
+                <hr/>
+                <Row>
+        
+                <Col xs={4} md={4}>
+                  <h6><b>Hotel Buhari</b></h6>
+                  <p>Tambaram</p>
+                  <hr/>
+                  <p>Combos</p>
+                  <p>Veg Soups</p>
+                  <p>Non Veg Soups</p>
+                  <p>Mutton Biryani</p>
+                  <p>Chicken Biryani</p>
+                  <p>Bucket Biryani</p>
+                  </Col>
+                  <Col xs={8} md={8}>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg1} alt="" />
+                      <p className='pop-align'>Chicken Pepper</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg2} alt="" />
+                      <p className='pop-align'>Mutton Masala</p>
+                      </Col>
+                      
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg3} alt="" />
+                      <p className='pop-align'>Chicken Chukka</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg4} alt="" />
+                      <p className='pop-align'>Mutton Chukka</p>
+                      </Col>
+                     
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg5} alt="" />
+                      <p className='pop-align'>Kadai Chicken</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg6} alt="" />
+                      <p className='pop-align'>Butter Chicken Masala</p>
+                      </Col>
+                      
+                    </Row>
+                  
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </div>
+           </div>
+          </Popup>
             </Card>
           </div>
         </Col>
-        <Col className='pt-5' xs={12} md={4}>
+        <Col className='pt-3' xs={12} md={4}>
         <div className='cards'>
             <Card border="light">
               <Card.Img className='card-images' variant="top" src={foodimage3} alt="" />
@@ -178,6 +512,72 @@ function App() {
                   </Col>
                 </Row>
               </Card.Body>
+              <Popup trigger={<Button style={{background:"#ECECEC", color:"black", border:"white", fontFamily:"Figtree",fontSize:"23px", boxShadow:"none"}} className="quickview cards">QUICK VIEW</Button>}
+           position="center bottom" className='pop-position'>
+           <div className='quickview-popup'>
+           <div className='popup-card cards'>
+            <Card border="light">
+              {/* <Card.Img className='card-images' variant="top" src={foodimage3} alt="" /> */}
+              <Card.Body>
+                <Card.Title style={{textAlign:"center"}}>MENU</Card.Title>
+                <hr/>
+                <Row>
+        
+                <Col xs={4} md={4}>
+                  <h6><b>Hotel Buhari</b></h6>
+                  <p>Tambaram</p>
+                  <hr/>
+                  <p>Combos</p>
+                  <p>Veg Soups</p>
+                  <p>Non Veg Soups</p>
+                  <p>Mutton Biryani</p>
+                  <p>Chicken Biryani</p>
+                  <p>Bucket Biryani</p>
+                  </Col>
+                  <Col xs={8} md={8}>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg1} alt="" />
+                      <p className='pop-align'>Chicken Pepper</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg2} alt="" />
+                      <p className='pop-align'>Mutton Masala</p>
+                      </Col>
+                      
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg3} alt="" />
+                      <p className='pop-align'>Chicken Chukka</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg4} alt="" />
+                      <p className='pop-align'>Mutton Chukka</p>
+                      </Col>
+                     
+
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg5} alt="" />
+                      <p className='pop-align'>Kadai Chicken</p>
+                      </Col>
+                      <Col xs={6} md={6}>
+                      <Card.Img className='popup-img' variant="top" src={popimg6} alt="" />
+                      <p className='pop-align'>Butter Chicken Masala</p>
+                      </Col>
+                      
+                    </Row>
+                  
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </div>
+           </div>
+          </Popup>
             </Card>
           </div>
         </Col>

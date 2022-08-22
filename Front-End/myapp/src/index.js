@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavScrollExample from './Navbar';
  import Banner from './Banner';
-// import Footer from './Footer';
+// import Footer from './pages/Footer';
 // import Example from './Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -104,3 +104,51 @@ justify-content: center;
     text-align: right;
     margin-left: auto!important;
   }
+
+  /* .quickview{
+    width: 358px;
+    height: 50px;
+  } */
+
+  .quickview-popup{
+    color:black;
+    width: 100%;
+  }
+
+  .popup-img{
+  padding: 12px;
+  width: 100px;
+  height: 90px;
+}
+.pop-align{
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  .pop-position{
+    position: center top;
+  }
+}
+/* @media screen and (max-width: 990px) {
+  .quickview {
+    width: 215px; 
+  }
+}
+@media screen and (max-width: 768px) {
+  .quickview {
+    width: 515px; 
+  }
+}
+@media screen and (max-width: 574px) {
+  .quickview {
+    width: 550px; 
+  }
+}
+@media screen and (max-width: 570px) {
+  .quickview {
+    width: 550px; 
+  }
+}
+
+
+ */
