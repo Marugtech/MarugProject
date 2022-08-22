@@ -92,8 +92,9 @@ function App() {
                   Veg Restaurent - Indian Bases
                 </Card.Text>
                 <Row>
+        
                 <Col xs={12} md={5}>
-                <Button style={{ background:"#d10000",border:"none"}}>Order Now</Button>
+                <Button className='orange'>Order Now</Button>
                   </Col>
                   <Col xs={12} md={4}>
                 <p className='arivaltime'>Arrival time 40min</p>
@@ -181,7 +182,8 @@ function App() {
           </div>
         </Col>
       </Row>
-      
+   
+ 
     </Container>
   );
 }
