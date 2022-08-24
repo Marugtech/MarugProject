@@ -1,0 +1,33 @@
+$GroundColor: rgb(215, 11, 11);
+$BColor: black;
+$FColor: white;
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background: $BColor;
+    border-radius: 50%
+}
+
+.alignment {
+    text-align: left;
+    text-decoration: none;
+    color: $FColor;
+    justify-content: left;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.white-color {
+    color: $FColor;
+}
+
+@media screen and (max-width: 776px) {
+    .alignment {
+        text-align: center;
+        text-decoration: none;
+        color: $FColor;
+        justify-content: left;
+        align-items: flex-start;
+    }
+}

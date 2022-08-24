@@ -1,0 +1,31 @@
+.circle {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+}
+
+.alignment {
+  text-align: left;
+  text-decoration: none;
+  color: white;
+  justify-content: left;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.white-color {
+  color: white;
+}
+
+@media screen and (max-width: 776px) {
+  .alignment {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    justify-content: left;
+    align-items: flex-start;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */

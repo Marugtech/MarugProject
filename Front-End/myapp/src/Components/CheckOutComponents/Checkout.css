@@ -1,0 +1,44 @@
+.cmn-clr {
+    color: #d10000;
+}
+
+.chkout-img {
+    width: 100px;
+    height: 70px;
+}
+
+.food-name {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.food-quantity {
+    color: #909090;
+    font-size: 19px;
+}
+
+.btn-dec {
+    border-style: 1px solid block;
+    background-color: #ffff;
+    border: 1px solid #909090;
+    margin-left: 1rem;
+}
+
+.btn-inc {
+    margin-left: 1rem;
+    background-color: #ffff;
+    border: 1px solid #909090;
+}
+
+.display-num {
+    margin-left: 1rem;
+    font-size: 24px;
+}
+
+.btn-chkout {
+    background-color: #d10000;
+    border: 1px solid #d10000;
+    color: #ffff;
+    font-size: 20px;
+    width: 100%;
+}

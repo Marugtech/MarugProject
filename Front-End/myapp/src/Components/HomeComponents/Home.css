@@ -1,0 +1,83 @@
+/* CARDS */
+
+.App {
+  text-align: center;
+}
+
+.cards {
+  box-shadow: 0px 3px 10px rgba(34, 35, 58, 0.2);
+  opacity: 10px;
+}
+
+.card-images {
+  padding: 12px;
+  width: 370px;
+  height: 234px;
+}
+
+@media only screen and (min-width: 560px) {
+  .pt-5 {
+    padding-top: 5px;
+    padding-bottom: 4px;
+  }
+}
+
+@media only screen and (max-width : 756px) {
+  .arivaltime {
+    padding-top: 20px !important;
+  }
+}
+
+@media only screen and (min-width : 800px) {
+  .arivaltime {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width : 800px) {
+  .text-right {
+    text-align: right;
+    justify-content: right;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width : 800px) {
+  .text-center {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.custom-btn {
+  background-color: #d10000;
+}
+
+.filters {
+  float: right;
+  text-align: right;
+  margin-left: auto !important;
+}
+
+.quickview-popup {
+  color: black;
+  width: 100%;
+}
+
+.popup-img {
+  padding: 12px;
+  width: 100px;
+  height: 90px;
+}
+
+.pop-align {
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  .pop-position {
+    position: center top;
+  }
+}

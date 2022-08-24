@@ -4,20 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavScrollExample from './Navbar';
- import Banner from './Banner';
-// import Footer from './pages/Footer';
-// import Example from './Login';
+// import Header from './Components/HeaderComponents/Header';
+// import Banner from './Components/SliderComponents/Banner';
+// import Home from "./Components/HomeComponents/Home";
+// import Footer from './Components/FooterComponents/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-    <NavScrollExample></NavScrollExample>
-     <Banner></Banner> 
-    <App></App>
-    {/* <Footer></Footer> */}
-    {/* <Example></Example> */}
-    {/* <Login></Login> */}
+        {/* <Header></Header>
+     <Banner></Banner>
+     <Home></Home> */}
+        <App></App>
+        {/* <Footer></Footer> */}
     </React.StrictMode>
 );
 
