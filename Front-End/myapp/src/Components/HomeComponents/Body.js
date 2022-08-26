@@ -22,7 +22,7 @@ export default function Body() {
                 <Col sm={12} xs={12} md={4} xl={4} lg={4} xxl={4} className='pt-4'> <Card className='card'>
                     <Card.Img className='card-img' variant="top" src={Foodimg3} />
                     <Card.Body>
-                        <Card.Title>The Biriyani</Card.Title>
+                        <Card.Title> Biriyani</Card.Title>
                         <Card.Text>
                             Veg Restaurents - Indian Bases
                         </Card.Text>
