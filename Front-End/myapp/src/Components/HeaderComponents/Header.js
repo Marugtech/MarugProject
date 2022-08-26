@@ -12,7 +12,6 @@ import { ImMobile } from "react-icons/im";
 import { BiMap, BiSearch, BiCartAlt, BiCaretDown } from "react-icons/bi";
 import companyLogo from './../../assets/logo/Logo1.jpeg';
 import Modal from 'react-bootstrap/Modal';
-import Checkout from "./../CheckOutComponents/Checkout";
 
 
 function Header() {
@@ -40,7 +39,7 @@ function Header() {
           <Form className="d-flex">
             <Navbar.Brand href="#"><BiSearch className='nav-icons' color="#d10000" />SEARCH</Navbar.Brand>
             <Navbar.Brand href="#" onClick={handleShow}><BsPerson className='nav-icons' color="#d10000" />LOGIN</Navbar.Brand>
-            <Navbar.Brand href={<Checkout />}><BiCartAlt className='nav-icons' color="#d10000" />CART</Navbar.Brand>
+            <Navbar.Brand href="/checkout"><BiCartAlt className='nav-icons' color="#d10000" />CART</Navbar.Brand>
           </Form>
         </Navbar.Collapse>
       </Container>
@@ -100,7 +99,6 @@ function Header() {
                 <Form.Control
                   type="email"
                   placeholder="Email"
-                  autoFocus
                 />
                 <div className="search-icon4">
                   <AiOutlineMail />
@@ -112,7 +110,6 @@ function Header() {
                 <Form.Control
                   type="number"
                   placeholder="Phone"
-                  autoFocus
                 />
                 <div className="Mobile-Icon">
                   <ImMobile />

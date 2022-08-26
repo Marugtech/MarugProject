@@ -21,14 +21,14 @@
 
 .search-icon {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 95px;
     z-index: 9999;
 }
 
 .search-icon1 {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 150px;
     z-index: 9999;
 }
@@ -54,7 +54,7 @@ a:hover {
 
 .search-icon3 {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 45px;
     padding-top: -3px;
     padding-bottom: 30px;
@@ -63,21 +63,21 @@ a:hover {
 
 .search-icon4 {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 100px;
     z-index: 9999;
 }
 
 .Mobile-Icon {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 152px;
     z-index: 9999;
 }
 
 .lock-icon {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 205px;
     z-index: 9999;
 }

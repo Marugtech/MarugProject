@@ -1,0 +1,58 @@
+p {
+  color: #343537;
+}
+
+.card-img {
+  padding: 15px;
+  height: 200px;
+}
+
+.card {
+  border: #ffff;
+  box-shadow: 0px 3px 10px rgba(34, 35, 58, 0.2);
+}
+
+.btn-cart {
+  border: #ffff;
+  background-color: #d10000;
+  color: #ffff;
+  border-radius: 2px;
+}
+
+/* QuickView Popup */
+
+.cards {
+  border: #ffff;
+  box-shadow: 0px 3px 10px rgba(34, 35, 58, 0.2);
+  width: 100%;
+}
+
+.quickview-popup {
+  color: black;
+  width: 100%;
+}
+
+.popup-image {
+  padding: 12px;
+  width: 85px;
+  height: 65px;
+}
+
+.pop-align {
+  font-size: 12px;
+  text-align: left;
+}
+
+.p-popup {
+  font-size: 13px;
+}
+
+.p1-popup {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 700px) {
+  .pop-position {
+    position: center top;
+  }
+}

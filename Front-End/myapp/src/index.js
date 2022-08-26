@@ -4,19 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Header from './Components/HeaderComponents/Header';
-// import Banner from './Components/SliderComponents/Banner';
-// import Home from "./Components/HomeComponents/Home";
-// import Footer from './Components/FooterComponents/Footer';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        {/* <Header></Header>
-     <Banner></Banner>
-     <Home></Home> */}
         <App></App>
-        {/* <Footer></Footer> */}
     </React.StrictMode>
 );
 

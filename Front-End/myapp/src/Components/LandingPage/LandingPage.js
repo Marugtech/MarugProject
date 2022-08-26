@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../HeaderComponents/Header";
 import Banner from "../SliderComponents/Banner";
-import Home from "../HomeComponents/Home";
+import Body from "./../HomeComponents/Body";
 import Footer from "../FooterComponents/Footer";
 
 function LandingPage() {
@@ -9,7 +9,7 @@ function LandingPage() {
     <div>
       <Header></Header>
       <Banner></Banner>
-      <Home></Home>
+      <Body></Body>
       <Footer></Footer>
     </div>
   );

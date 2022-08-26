@@ -1,0 +1,22 @@
+.map-card {
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    opacity: 10px;
+    border: #ffff;
+}
+
+.p-font {
+    font-size: 20px;
+}
+
+.p-font1 {
+    font-size: 25px;
+}
+
+.p-font2 {
+    font-size: 20px;
+}
+
+.img {
+    width: 90px;
+    height: 90px;
+}

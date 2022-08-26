@@ -6,6 +6,8 @@ import Header from '../HeaderComponents/Header';
 import './../CheckOutComponents/Checkout.css';
 import { useState } from 'react';
 import Footer from './../FooterComponents/Footer';
+import CloseButton from 'react-bootstrap/CloseButton';
+import Button from 'react-bootstrap/esm/Button';
 
 function ButtonIncrement(props) {
 
@@ -59,7 +61,7 @@ export default function Checkout() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td><CloseButton /></td>
                             <td className='food-name'><b>Mutton Biryani</b><br></br><span className='food-quantity'>2Kg Bucket</span></td>
                             <td><img className='chkout-img' src={chkoutImg} alt=''></img></td>
                             <td>
@@ -70,7 +72,7 @@ export default function Checkout() {
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td><CloseButton /></td>
                             <td className='food-name'><b>Mutton Biryani</b><br></br><span className='food-quantity'>2Kg Bucket</span></td>
                             <td><img className='chkout-img' src={chkoutImg} alt=''></img></td>
                             <td>
@@ -88,7 +90,7 @@ export default function Checkout() {
                             <td></td>
                             <td><h5 style={{ textTransform: 'uppercase' }}>Total</h5></td>
                             <td ><h5>₹1600</h5></td>
-                            <td ><button className='btn-chkout'>Check Out</button></td>
+                            <td ><Button href="/payment" className='btn-chkout' style={{background:'#d10000', borderStyle:'none', boxShadow:'none'}}>Check Out</Button></td>
                         </tr>
                     </tfoot>
                 </Table>
