@@ -1,0 +1,40 @@
+.dashboard-dark
+{
+    background-color: #24242b;
+    color: #FFFF;
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    border-radius: 1px;
+    height: 100vh;
+    opacity: 10px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #24242b;
+    color: #FFFF;
+    height: 40px;
+    border-bottom: 2px solid #d10000;
+  }
+  .merchantnav
+  {
+color: #FFFF;
+padding-left: 4px;
+  }
+  .merchantnav:hover
+  {
+    color: #d10000;
+  }
+  .dashboard-white
+  {
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    border-radius: 2px;
+    border: 1px solid #d3cccd;
+  }
+  .date-time
+  {
+    width:200px;
+  }
+  .add-background
+  {
+    background-color: #d3cccd;
+    padding: 4px;
+    
+  }

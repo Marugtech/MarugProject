@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import { BsPerson } from "react-icons/bs";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './../HeaderComponents/Header.css'
+import './Header.css'
 import { ImMobile } from "react-icons/im";
 import { BiMap, BiSearch, BiCartAlt, BiCaretDown } from "react-icons/bi";
 import companyLogo from './../../assets/logo/Logo1.jpeg';
@@ -37,9 +37,9 @@ function Header() {
             navbarScroll>
           </Nav>
           <Form className="d-flex">
-            <Navbar.Brand href="#"><BiSearch className='nav-icons' color="#d10000" />SEARCH</Navbar.Brand>
-            <Navbar.Brand href="#" onClick={handleShow}><BsPerson className='nav-icons' color="#d10000" />LOGIN</Navbar.Brand>
-            <Navbar.Brand href="/checkout"><BiCartAlt className='nav-icons' color="#d10000" />CART</Navbar.Brand>
+            <Navbar.Brand className='nav-links' href="#"><BiSearch className='nav-icons' color="#d10000" />SEARCH</Navbar.Brand>
+            <Navbar.Brand className='nav-links' href="#" onClick={handleShow}><BsPerson className='nav-icons' color="#d10000" />LOGIN</Navbar.Brand>
+            <Navbar.Brand className='nav-links' href="/checkout"><BiCartAlt className='nav-icons' color="#d10000" />CART</Navbar.Brand>
           </Form>
         </Navbar.Collapse>
       </Container>

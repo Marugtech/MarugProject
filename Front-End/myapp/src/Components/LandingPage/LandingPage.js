@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../HeaderComponents/Header";
 import Banner from "../SliderComponents/Banner";
-import Body from "./../HomeComponents/Body";
+import Body from "../HomeComponents/Body";
 import Footer from "../FooterComponents/Footer";
 
 function LandingPage() {

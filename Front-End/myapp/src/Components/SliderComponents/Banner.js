@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import './../SliderComponents/Banner.css';
+import './Banner.css';
 import Bannerimg1 from './../../assets/Banner/Banner-img-1.jpeg'
 import Bannerimg2 from './../../assets/Banner/banner-img-2.jpeg'
 import Container from 'react-bootstrap/Container';

@@ -1,0 +1,32 @@
+.merchant-card
+{
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    opacity: 10px;
+    border: #ffff;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+    background-color: #ffff;
+    color: #343537;
+    font-size: 20px;
+    border-left: 4px solid #d10000;
+}
+.merchantnav
+{
+    color: #343537;
+}
+.merchantnav:hover
+{
+    color: #d10000;
+}
+
+.bg-primary
+{
+    background-color: #f4f0f1;
+    color: #343537;
+    border-radius: 50%;
+}
+.bg-primary
+{
+background-color: #f4f0f1;
+}

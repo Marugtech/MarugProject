@@ -1,0 +1,97 @@
+.merchant-card {
+  box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+  opacity: 10px;
+  border: white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: white;
+  color: #343537;
+  font-size: 20px;
+  border-left: 4px solid #d10000;
+}
+
+.merchantnav {
+  color: #343537;
+}
+
+.merchantnav:hover {
+  color: #d10000;
+}
+
+.bg-primary {
+  background-color: #f4f0f1;
+  color: #343537;
+  border-radius: 50%;
+}
+
+.bg-primary {
+  background-color: #f4f0f1;
+}/*# sourceMappingURL=MerchantBody.css.map */
+
+.border-div
+{
+    border: 1px solid #d3cccd;
+}
+.merchant-form
+{
+    width: 80%;
+}
+.form-grp-field
+{
+    padding: 4px;
+    height: 75px;
+    align-items: center;
+}
+.form-field
+{
+  height: 50px;
+  border-radius: 2px;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .merchant-form .file-form {
+      width: 100%;
+  }
+}
+.btn-merchanr-form
+{
+  float: right;
+  background-color: #d10000;
+  border: #ffff;
+  width: 140px;
+}
+.btn-merchanr-form:hover
+{
+  background-color: #d10000;
+}
+.btn-merchanr-form::after
+{
+  background-color: #d10000 ;
+}
+.btn-complete
+{
+  float: right;
+  background-color: #d10000;
+  border: #ffff;
+}
+.btn-complete:hover
+{
+  background-color: #d10000;
+}
+.file-form
+{
+  border: #ffff;
+  border-bottom: 2px solid #f4f0f1;
+  border-radius: 2px;
+  width: 80%;
+}
+.clr-label
+{
+  color: #d3cccd;
+}
+label
+{
+  color: #8e8c8d;
+}
+

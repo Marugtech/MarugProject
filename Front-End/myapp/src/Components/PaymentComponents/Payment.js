@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Header from '../HeaderComponents/Header';
 import Footer from '../FooterComponents/Footer';
-import './../PaymentComponents/Payment.css'
+import './Payment.css'
 import Card from 'react-bootstrap/Card';
 import { IoMdPin } from "react-icons/io";
 import Tab from 'react-bootstrap/Tab';

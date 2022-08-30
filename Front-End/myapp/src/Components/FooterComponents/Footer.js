@@ -2,7 +2,7 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/esm/Container';
-import './../FooterComponents/Footer.css';
+import './Footer.css';
 import { AiOutlineCopyright, AiOutlineInstagram, AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import image from "./../../assets/images/img4.jpeg";

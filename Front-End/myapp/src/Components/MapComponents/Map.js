@@ -19,7 +19,9 @@ export default function Map() {
                                 <h3>You made the payment successfully....</h3>
                                 <p className='p-font' style={{ padding: '7px' }}><b>Order Id</b>  #45890120 <span style={{ padding: '7px' }}>Items 3</span> <span style={{ padding: '7px' }}> ₹1700 </span></p>
                             </div>
-                            <div></div>
+                            <div className=''>
+                                
+                            </div>
                             <Row>
                                 <Col xs={12} md={7}>
                                     <div className=' p-font1 '>Your order is on the way it will reach in <b><span style={{ color: 'green' }}>45 mins</span></b>
