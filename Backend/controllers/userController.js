@@ -44,7 +44,10 @@ const loginUser = async (req,res,next)=>{
          res.cookie("auth_token", token, {
           httpOnly : true,
          }).status(200)
-          res.status(200).json("Logged in successfully")
+          res.status(200).json({
+            msg:"Logged in successfully",
+            token: token
+          })
        } catch (error) {
           next(errorHandler(401, "Internal Server Error"))
        }
