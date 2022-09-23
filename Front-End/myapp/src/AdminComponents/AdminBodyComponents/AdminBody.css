@@ -1,0 +1,26 @@
+.admin-card {
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    opacity: 10px;
+    border: white;
+    
+  }
+  
+  .admin-card1{
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    opacity: 10px;
+    border: white;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: white;
+    color:  #090909;
+    font-size: 20px;
+    border-bottom: 2px solid #d10000;
+  }
+  
+  .adminnav {
+    color:  #090909;
+  }
+  
+  .adminnav:hover {
+    color: #d10000;
+  }

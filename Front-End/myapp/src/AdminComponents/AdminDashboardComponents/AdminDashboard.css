@@ -1,0 +1,40 @@
+.admin-card
+{
+    background-color: #f1f3f2;
+    color: #070707;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 2px 3px 15px rgba(34, 35, 58, 0.2);
+    
+}
+.total-num
+{
+    color: #1e6bdf;
+    font-size: 25px;
+}
+.card-top
+{
+    background-color: #f7f5f6;
+    color: #070707;
+    font-size: 16px;
+    box-shadow: 2px 5px 25px rgba(34, 35, 58, 0.2);
+}
+.img-store
+{
+    width: 65px;
+    height: 55px;
+    border-radius: 50%;
+}
+.details-card
+{
+    background-color: #ffff;
+    border-radius: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 4px;
+}
+.muted-text
+{
+    color: #c2c0c4;
+    font-size: 15px;
+}

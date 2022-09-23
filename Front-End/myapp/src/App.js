@@ -6,6 +6,8 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import Checkout from "./Components/CheckOutComponents/Checkout";
 import Payment from "./Components/PaymentComponents/Payment";
 import Map from "./Components/MapComponents/Map";
+import AdminDashboard from "./AdminComponents/AdminDashboardComponents/AdminDashboard";
+
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
             </Route>
             <Route path="/payment"  exact={true} >
              <Payment/>
+            </Route>
+            <Route path="/dashboard"  exact={true} >
+             <AdminDashboard/>
             </Route>
             <Route path="/map" exact={true}>
             <Map/>

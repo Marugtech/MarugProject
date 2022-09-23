@@ -1,0 +1,15 @@
+
+.text-table
+{
+    font-size: 17px;
+}
+.tit-tab
+{
+    width: 150px;
+}
+.search-text
+{
+    display: flex;
+    float:right;
+    background-color: #fbf9fa;
+}
