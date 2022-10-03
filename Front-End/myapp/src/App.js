@@ -6,6 +6,7 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import Checkout from "./Components/CheckOutComponents/Checkout";
 import Payment from "./Components/PaymentComponents/Payment";
 import Map from "./Components/MapComponents/Map";
+<<<<<<< HEAD
 import Admin from "./AdminComponents/Admin"
 import Merchant from "./MerchantComponents/MerchantBodyComponents/MerchantBody";
 import Delivery from "./DeliveryComponents/OrderComponents/Order";
@@ -13,6 +14,11 @@ import Person from './DeliveryComponents/PersondetailsComponents/Person';
 import Setting from "./AdminComponents/Settings/SettingData";
 import Ratings from "./AdminComponents/Ratings/Ratings";
 //import CustomerData from "./AdminComponents/CustomerComponent/CustomerData";
+=======
+import AdminDashboard from "./AdminComponents/AdminDashboardComponents/AdminDashboard";
+
+
+>>>>>>> a76c19d6d2c0d384da67c1d2ceadea671810b5c7
 function App() {
   return (
     <div>
@@ -23,6 +29,9 @@ function App() {
             </Route>
             <Route path="/payment"  exact={true} >
              <Payment/>
+            </Route>
+            <Route path="/dashboard"  exact={true} >
+             <AdminDashboard/>
             </Route>
             <Route path="/map" exact={true}>
             <Map/>

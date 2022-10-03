@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React,{useState} from "react";
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/Form';
@@ -12,10 +12,91 @@ import { ImMobile } from "react-icons/im";
 import { BiMap, BiSearch, BiCartAlt, BiCaretDown } from "react-icons/bi";
 import companyLogo from './../../assets/logo/Logo1.jpeg';
 import Modal from 'react-bootstrap/Modal';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-
-
+//import {useNavigate} from 'react-router-dom';
 function Header() {
+  
+  //signup
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  const [authenticated, setAuthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated")|| false));
+ 
+  const collectData = async (e) => {
+    e.preventDefault();
+    if (!username) {
+      setErrorMsg("Please Enter your Name");
+      return;
+    }
+    if (!email) {
+      setErrorMsg("Please Enter your Email");
+      return;
+    }
+    if (!phone) {
+      setErrorMsg("Please Enter your Phone Number");
+      return;
+    }
+    if (!password) {
+      setErrorMsg("Please Enter your Password");
+      return;
+    }
+
+  
+    console.log(username, email, phone, password);
+    let result = await fetch("http://localhost:5000/api/users/signup", {
+      method: 'post',
+      body: JSON.stringify({ username, email, phone, password }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+      result = await result.json();
+      console.log(result); 
+  }
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (!email) {
+      setErrorMsg("Please Enter your Email");
+      return;
+    }
+    if (!phone) {
+      setErrorMsg("Please Enter your Phone Number");
+      return;
+    }
+    if (!password) {
+      setErrorMsg("Please Enter your Password");
+      return;
+    }
+  
+    console.log(email, phone, password)
+
+    let result = await fetch("http://localhost:5000/api/users/signin", {
+      method: 'post',
+      body: JSON.stringify({ email, phone, password }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    if(result){
+      result = await result.json();
+      console.log(result);
+    }
+     
+if(!result){
+  setAuthenticated(false)
+  localStorage.setItem("authenticated", false);
+}
+else{
+  setAuthenticated(true)
+  localStorage.setItem("authenticated", true);
+}
+
+
+  }
+
+
   const [show, setShow] = useState(false);
   const [show1, setShow1] = useState(false);
   const handleClose = () => setShow(false);
@@ -97,10 +178,23 @@ function Header() {
                 <Form.Control
                   type="email"
                   placeholder="Email"
+                  value={email} onChange={(e) => setEmail(e.target.value)}
                   autoFocus
                 />
                 <div className="search-icon">
                   <AiOutlineMail />
+                </div>
+              </InputGroup>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="Input5">
+              <InputGroup>
+                <Form.Control
+                  type="number"
+                  placeholder="Phone"
+                  value={phone} onChange={(e) => setPhone(e.target.value)}
+                />
+                <div className="search-icon1">
+                  <ImMobile />
                 </div>
               </InputGroup>
             </Form.Group>
@@ -109,13 +203,17 @@ function Header() {
               controlId="Input2"
             >
               <InputGroup>
-                <Form.Control type='password' placeholder='Password' />
-                <div className="search-icon1">
+                <Form.Control type='password' placeholder='Password'
+                  value={password} onChange={(e) => setPassword(e.target.value)} />
+                <div className="Mobile-Icon">
                   <AiOutlineLock />
                 </div>
               </InputGroup>
             </Form.Group>
-            <Button className='but' onClick={handleClose} style={{ backgroundColor: '#d10000', borderStyle: 'none', boxShadow: 'none' }}>
+            <h6><span style={{ color: "#d10000" }}>{errorMsg}</span></h6>
+            {/* <p>{displayError.message}</p> */}
+            <br />
+            <Button className='but' onClick={handleLogin} style={{ backgroundColor: '#d10000', borderStyle: 'none', boxShadow: 'none' }}>
               login Now
             </Button>
           </Form>
@@ -131,6 +229,7 @@ function Header() {
                 <Form.Control
                   type="text"
                   placeholder="Username"
+                  value={username} onChange={(e) => setUsername(e.target.value)}
                   autoFocus
                 />
                 <div className="search-icon3">
@@ -143,6 +242,7 @@ function Header() {
                 <Form.Control
                   type="email"
                   placeholder="Email"
+                  value={email} onChange={(e) => setEmail(e.target.value)}
                 />
                 <div className="search-icon4">
                   <AiOutlineMail />
@@ -154,6 +254,7 @@ function Header() {
                 <Form.Control
                   type="number"
                   placeholder="Phone"
+                  value={phone} onChange={(e) => setPhone(e.target.value)}
                 />
                 <div className="Mobile-Icon">
                   <ImMobile />
@@ -165,15 +266,17 @@ function Header() {
               controlId="Input6"
             >
               <InputGroup>
-                <Form.Control type='password' placeholder='Password' />
+                <Form.Control type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                 <div className='lock-icon'>
                   <AiOutlineLock />
                 </div>
               </InputGroup>
             </Form.Group>
-            <Button className='but' onClick={handleClose1} style={{ backgroundColor: '#d10000', borderStyle: 'none', boxShadow: 'none' }}>
+           
+            <h6><span style={{ color: "#d10000" }}>{errorMsg}</span></h6>
+            <Button className='but' onClick={collectData} style={{ backgroundColor: '#d10000', borderStyle: 'none', boxShadow: 'none' }}>
               Register Now
-            </Button><br/><br/>
+            </Button><br /><br />
             <p>By creating an account, I accept the Terms & Cconditions & Privacy Policy</p>
           </Form>
         </Modal.Body>

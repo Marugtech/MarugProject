@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import chkoutImg from './../../assets/images/img3.jpeg';
 import Header from '../HeaderComponents/Header';
 import './../CheckOutComponents/Checkout.css';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Footer from './../FooterComponents/Footer';
 import CloseButton from 'react-bootstrap/CloseButton';
 import Button from 'react-bootstrap/esm/Button';
@@ -31,13 +31,38 @@ function Display(props) {
     )
 }
 
+
 export default function Checkout() {
+
+
+    
     const [counter, setCounter] = useState(1);
+    const [counter1, setCounter1] = useState(1);
+    // const [count, setCounter] = useState(props.startsWith);
     const incrementCounter = () => setCounter(counter + 1);
     let decrementCounter = () => setCounter(counter - 1);
     if (counter <= 1) {
         decrementCounter = () => setCounter(1);
     }
+
+
+    const incrementCounter1 = () => setCounter1(counter1 + 1);
+    let decrementCounter1 = () => setCounter1(counter1 - 1);
+    if (counter1 <= 1) {
+        decrementCounter1 = () => setCounter1(1);
+    }
+
+    const multipliedValue = useMemo(() => {
+        return counter * 300;
+      }, [counter]);
+      const multipliedValue1 = useMemo(() => {
+        return counter1 * 200;
+      }, [counter1]);
+      const totalvalue = useMemo(() => {
+        return multipliedValue + multipliedValue1;
+      }, [multipliedValue, multipliedValue1]);
+    
+    
     return (
         <><div><Header></Header><hr></hr></div><br></br>
             <Container>
@@ -68,7 +93,7 @@ export default function Checkout() {
                                 <div>
                                     <ButtonDecrement onClickFunc={decrementCounter} /><Display message={counter} /><ButtonIncrement onClickFunc={incrementCounter} /></div>
                             </td>
-                            <td className=''><h5>₹750</h5></td>
+                            <td className=''><h5> {multipliedValue}</h5></td>
                             <td></td>
                         </tr>
                         <tr>
@@ -77,9 +102,9 @@ export default function Checkout() {
                             <td><img className='chkout-img' src={chkoutImg} alt=''></img></td>
                             <td>
                                 <div>
-                                    <ButtonDecrement onClickFunc={decrementCounter} /><Display message={counter} /><ButtonIncrement onClickFunc={incrementCounter} /></div>
+                                    <ButtonDecrement onClickFunc={decrementCounter1} /><Display message={counter1} /><ButtonIncrement onClickFunc={incrementCounter1} /></div>
                             </td>
-                            <td className=''><h5>₹850</h5></td>
+                            <td className=''><h5>{multipliedValue1}</h5></td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -89,7 +114,7 @@ export default function Checkout() {
                             <td ></td>
                             <td></td>
                             <td><h5 style={{ textTransform: 'uppercase' }}>Total</h5></td>
-                            <td ><h5>₹1600</h5></td>
+                            <td ><h5>{totalvalue}</h5></td>
                             <td ><Button href="/payment" className='btn-chkout' style={{background:'#d10000', borderStyle:'none', boxShadow:'none'}}>Check Out</Button></td>
                         </tr>
                     </tfoot>

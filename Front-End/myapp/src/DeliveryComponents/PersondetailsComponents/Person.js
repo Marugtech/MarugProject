@@ -21,11 +21,11 @@ export default function person() {
                 <br></br>
                 <Container fluid>
                     <Card style={{ border: "none" }}  className='person-card' >
-                        <Card.Body className='mx-auto card-body p-4'>
+                        <Card.Body className='card-body p-4'>
                             <Card.Title>Submit The Following Details</Card.Title>
                             <br></br>
                             <Row>
-                                <Col >
+                                <Col xs={12} sm={12} md={9} lg={9} xl={9}>
                                     <Form className="mb-3">
                                         <FloatingLabel className="mb-3" controlId="nmae" label="Enter FullName">
                                             <Form.Control type="name" placeholder="Enter FullName" />
