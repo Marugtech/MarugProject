@@ -9,10 +9,12 @@ import Badge from 'react-bootstrap/Badge';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Footer from '../../Components/FooterComponents/Footer';
+import MerchantHeader from '../MerchantHeaderComponents/MerchantHeader';
 export default function MerchantBody() {
     return (
-        <div><hr></hr>
-            <br></br>
+        <div>
+<MerchantHeader></MerchantHeader>
+<br></br>
             <Container>
                 <Tab.Container id="left-tabs-example" defaultActiveKey="tab1">
                     <Row>
@@ -104,7 +106,91 @@ export default function MerchantBody() {
                                         My glass shall not persuade me I am old, So long as youth and thou are of one date;
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="tab3">
-                                        My glass shall not persuade me I am old, So long as youth and thou are of one date;
+                                        <h3>Select Your Packages</h3>
+                                        <div className='p-4 border-div'>
+                                            <p><strong>Note:</strong>You Can Choose Only Option After Choosing Please Read our <br></br> Terms And Condition And Accepet That</p>
+                                            <hr></hr>
+                                            <Form className=''>
+                                                <Row>
+                                                    <Col sm={4} md={7} lg={7} xl={7}>
+                                                        <Form.Floating className="mb-2 form-float">
+                                                            <Form.Control
+                                                                id="floatingInputCustom"
+                                                                type="name"
+                                                                placeholder="name@example.com"
+                                                                disabled
+                                                            />
+                                                            <label htmlFor="floatingInputCustom">For <strong>3 Months</strong> Membership</label>
+                                                        </Form.Floating>
+                                                    </Col>
+                                                    <Col sm={4} md={3} lg={3} xl={3} className='pt-2'>
+                                                        <Button className='w-100 btn-rupees'>₹4500</Button>
+                                                    </Col>
+                                                    <Col sm={4} md={2} lg={2} xl={2} className='pt-2'>
+                                                    <label className="label">
+                                                            <input className="label__checkbox" type="checkbox" />
+                                                            <span className="label__text">
+                                                                <span className="label__check">
+                                                                    <i className="fa fa-check icon"></i>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </Col>
+                                                </Row>
+                                                <Row className='pt-3'>
+                                                    <Col sm={4} md={7} lg={7} xl={7}>
+                                                        <Form.Floating className="mb-2 form-float">
+                                                            <Form.Control
+                                                                id="floatingInputCustom"
+                                                                type="name"
+                                                                placeholder="name@example.com"
+                                                                disabled
+                                                            />
+                                                            <label htmlFor="floatingInputCustom">For <strong>6 Months</strong> Membership</label>
+                                                        </Form.Floating>
+                                                    </Col>
+                                                    <Col sm={4} md={3} lg={3} xl={3} className='pt-2'>
+                                                        <Button disabled className='w-100 btn-rupees'>₹8000</Button>
+                                                    </Col>
+                                                    <Col sm={4} md={2} lg={2} xl={2} className='pt-2'>
+                                                    <label className="label">
+                                                            <input className="label__checkbox" type="checkbox" />
+                                                            <span className="label__text">
+                                                                <span className="label__check">
+                                                                    <i className="fa fa-check icon"></i>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </Col>
+                                                </Row>
+                                                <Row className='pt-3'>
+                                                    <Col sm={4} md={7} lg={7} xl={7}>
+                                                        <Form.Floating className="mb-2 form-float">
+                                                            <Form.Control
+                                                                id="floatingInputCustom"
+                                                                type="name"
+                                                                placeholder="name@example.com"
+                                                                disabled
+                                                            />
+                                                            <label htmlFor="floatingInputCustom">For <strong>1 Year</strong> Membership</label>
+                                                        </Form.Floating>
+                                                    </Col>
+                                                    <Col sm={4} md={3} lg={3} xl={3} className='pt-2'>
+                                                        <Button className='w-100 btn-rupees'>₹12000</Button>
+                                                    </Col>
+                                                    <Col sm={4} md={2} lg={2} xl={2} className='pt-2'>
+                                                        <label className="label">
+                                                            <input className="label__checkbox" type="checkbox" />
+                                                            <span className="label__text">
+                                                                <span className="label__check">
+                                                                    <i className="fa fa-check icon"></i>
+                                                                </span>
+                                                            </span>
+                                                        </label>
+                                                    </Col>
+                                                </Row>
+                                            </Form>
+                                        </div>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="tab4">
                                         <h3>Upload Documents For Verifications</h3><br></br>

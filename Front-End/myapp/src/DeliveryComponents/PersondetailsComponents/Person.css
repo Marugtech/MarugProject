@@ -1,0 +1,29 @@
+.img-baner
+{
+    height: 270px;
+    width: 100%;
+}
+.persong-bg
+{
+    background-color: #f4f4f4;
+}
+.person-card
+{
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    border-style:1px sold #ffff;
+    
+}
+.card-body
+{
+margin-left: 30px;
+padding-top: 15px;
+}
+.btn-details
+{
+    color: #ffff;
+    background-color:#fd1916;
+    border-style: none;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 2px;
+}

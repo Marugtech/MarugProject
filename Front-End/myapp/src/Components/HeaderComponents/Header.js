@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/Form';
@@ -12,6 +12,7 @@ import { ImMobile } from "react-icons/im";
 import { BiMap, BiSearch, BiCartAlt, BiCaretDown } from "react-icons/bi";
 import companyLogo from './../../assets/logo/Logo1.jpeg';
 import Modal from 'react-bootstrap/Modal';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 
 function Header() {
@@ -21,11 +22,54 @@ function Header() {
   const handleShow = () => setShow(true);
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
+  const [show2, setShow2] = useState(false);
 
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
+
+  const Api = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDr0lH_z8QG6gWJy0AI9kw1eqfICD23VC8"
+
+  const locaApi = `https://maps.googleapis.com/maps/api/geocode/json?`
+  const Key = `AIzaSyDr0lH_z8QG6gWJy0AI9kw1eqfICD23VC8`
+  let [latlng, setLatlng] = useState({});
+  const [location, setLocation] = useState({});
+
+
+  // const handleclick = async () => {
+  //   let result = await fetch(Api, {
+  //     method: 'POST',
+  //   });
+  //   result = await result.json();
+  //   console.log(result);
+  //   setAddress(result.location);
+  // }
+  useEffect(() => {
+          const fetchData = async () => {
+            let result = await fetch(Api, {
+              method: 'POST',
+            });
+            result = await result.json();
+          //  console.log(result);
+          setLatlng(result.location);
+          };
+      
+          fetchData();
+      }, []);
+  const Finalapi = (`${locaApi}latlng=${latlng.lat},${latlng.lng}&key=${Key}`);
+  const toggle = async () => {
+
+    let result = await fetch(Finalapi, {
+      method: 'GET',
+    });
+    result = await result.json();
+    console.log(result);
+    setLocation(result.results[0].address_components[2]);
+  }
   return (
-    <Navbar bg="" expand="lg">
+    <div>
+      <Navbar bg="" expand="lg">
       <Container>
-        <Navbar.Brand href="#"><BiMap className='nav-icons' />Chennai - Tambaram<BiCaretDown className='nav-icons' /></Navbar.Brand>
+        <Navbar.Brand href="#" onClick={handleShow2}><BiMap className='nav-icons'/>{location.long_name}<BiCaretDown className='nav-icons' /></Navbar.Brand>
         <div className='logo-center'>
           <img src={companyLogo} alt="Food delivery logo" />
         </div>
@@ -135,6 +179,17 @@ function Header() {
         </Modal.Body>
       </Modal>
     </Navbar>
+    <Offcanvas show={show2} onHide={handleClose2}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Location Finder</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+        {/* <Button onClick={handleclick}> Get Lat</Button>&nbsp; */}
+        <Button onClick={toggle}>GetLocation</Button>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </div>
+
   );
 }
 

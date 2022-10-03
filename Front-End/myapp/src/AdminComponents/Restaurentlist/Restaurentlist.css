@@ -1,0 +1,95 @@
+.admin-dashboard
+{
+    background-color: #faf8f9;
+    color: #090909;
+    box-shadow: 1px 3px 15px rgba(34, 35, 58, 0.2);
+    border-radius: 1px;
+    height: 100%;
+    opacity: 10px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #faf8f9;
+    color: #090909;
+    height: 40px;
+    border-bottom: 2px solid #d10000;
+    
+  }
+  .admin-nav
+  {
+    color: #090909;
+    font-size: 16px;
+  }
+  .admin-nav:hover
+  {
+    color: #d10000;
+  }
+  .tab-div
+  {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    background-color: #fbf9fa;
+  }
+  .tabcontent
+  {
+    padding-left: 2px;
+  }
+  /* --------Datatabel------ */
+.text-table
+{
+    font-size: 17px;
+}
+.tit-tab
+{
+    width: 150px;
+}
+.search-text
+{
+    display: flex;
+    float:right;
+    background-color: #fbf9fa;
+    width: 25%;
+}
+@media only screen and (max-width: 600px) {
+  .search-text {
+      width: 100%;
+  }
+}
+.sc-ikZpkk 
+{
+  font-size: large;
+}
+.sc-llJcti
+{
+  font-size: large;
+} 
+.lmGpws 
+{
+  font-size: initial;
+}
+.btnedit
+{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: large;
+  background-color: none;
+  text-align: center;
+  border: 1px solid black;
+}
+.btndelete
+{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+  background-color: none;
+  border: 1px solid red;
+  position: relative;
+}
+/* --------Datatabel------ */
+.ordercard
+{
+    box-shadow: 2px 5px 25px rgba(34, 35, 58, 0.2);
+    border-style:1px sold #ffff;
+}

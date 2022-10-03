@@ -6,7 +6,13 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import Checkout from "./Components/CheckOutComponents/Checkout";
 import Payment from "./Components/PaymentComponents/Payment";
 import Map from "./Components/MapComponents/Map";
-
+import Admin from "./AdminComponents/Admin"
+import Merchant from "./MerchantComponents/MerchantBodyComponents/MerchantBody";
+import Delivery from "./DeliveryComponents/OrderComponents/Order";
+import Person from './DeliveryComponents/PersondetailsComponents/Person';
+import Setting from "./AdminComponents/Settings/SettingData";
+import Ratings from "./AdminComponents/Ratings/Ratings";
+//import CustomerData from "./AdminComponents/CustomerComponent/CustomerData";
 function App() {
   return (
     <div>
@@ -20,6 +26,24 @@ function App() {
             </Route>
             <Route path="/map" exact={true}>
             <Map/>
+            </Route>
+            <Route path="/Admin" exact={true}>
+            <Admin/>
+            </Route>
+            <Route path="/Merchant" exact={true}>
+            <Merchant/>
+            </Route>
+            <Route path="/Delivery" exact={true}>
+            <Delivery/>
+            </Route>
+            <Route path="/Person" exact={true}>
+            <Person/>
+            </Route>
+            <Route path="/Setting" exact={true}>
+            <Setting/>
+            </Route>
+            <Route path="/Rating" exact={true}>
+            <Ratings/>
             </Route>
             <Route path="/" exact={true}>
             <LandingPage/>

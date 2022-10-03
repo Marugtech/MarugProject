@@ -1,0 +1,49 @@
+
+/* --------Datatabel------ */
+.text-table
+{
+    font-size: 17px;
+}
+.tit-tab
+{
+    width: 150px;
+}
+.search-text
+{
+    display: flex;
+    float:right;
+    background-color: #fbf9fa;
+}
+.sc-ikZpkk 
+{
+  font-size: large;
+}
+.sc-llJcti
+{
+  font-size: large;
+} 
+.lmGpws 
+{
+  font-size: initial;
+}
+.btnedit
+{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: large;
+  background-color: none;
+  text-align: center;
+  border: 1px solid black;
+}
+.btndelete
+{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+  background-color: none;
+  border: 1px solid red;
+  position: relative;
+}
+/* --------Datatabel------ */

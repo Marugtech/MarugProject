@@ -1,0 +1,47 @@
+.deliverybaner
+{
+    width: 100%;
+    height:380px;
+}
+.ordercard
+{
+    box-shadow: 2px 5px 25px rgba(34, 35, 58, 0.2);
+    border-style:1px sold #ffff;
+}
+.locat-width
+{
+    width: 220px;
+}
+.pick-color
+{
+    color: #0c6717;
+    font-size: 17px;
+}
+.store-img
+{
+    width: 85px;
+    height: 65px;
+    border-radius: 80%;
+}
+.img-width
+{
+    width: 100px;
+}
+.order-text
+{
+    font-size: 19px;
+}
+.location-img
+{
+    width: 100%;
+}
+.align-items-end
+{
+    margin-top: 20px;
+}
+.banercard
+{
+    padding-top: 4px;
+    align-items: flex-end;
+    
+}
